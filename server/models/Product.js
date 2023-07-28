@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Define the ItemSchema
-const ItemSchema = new Schema({
+const ProductSchema = new Schema({
   title: {
     type: String,
     required: true
@@ -28,6 +28,6 @@ const ItemSchema = new Schema({
 });
 
 // Create and export the Item model based on the ItemSchema
-const Item = mongoose.model('item', ItemSchema);
+const Product = mongoose.model('product', ProductSchema);
 
-module.exports = Item;
+module.exports = Product;
