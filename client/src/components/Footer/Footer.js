@@ -1,13 +1,13 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
+// import Grid from "@mui/material/Grid";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import EmailIcon from "@mui/icons-material/Email";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <div style={{ paddingTop: "30px", paddingBottom: "30px" }}>
-      <Grid
+      {/* <Grid
         style={{ display: "flex", justifyContent: "center" }}
         container
         sx={{ color: "text.primary" }}
@@ -36,7 +36,7 @@ const Footer = () => {
             }
           />
         </Grid>
-      </Grid>
+      </Grid> */}
     </div>
   );
 };
