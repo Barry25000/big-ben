@@ -1,7 +1,7 @@
 # big-ben
 
 ## Description
-  A simple e-commerce website built using React, Redux, Node, Express and MongoDB.
+A simple e-commerce website built using React, Redux, Node, Express and MongoDB.
 
 For the front end, we plan on using Semantic UI.
 
