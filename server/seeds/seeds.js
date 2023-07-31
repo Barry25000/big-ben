@@ -1,46 +1,63 @@
 // seed.js
-const db = require('../config/connection');
-const {Product} = require('../models');
+
+const mongoose = require('mongoose');
+const Item = require('./models/Item');
+
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/watch_db';
+
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => {
+    console.log('Connected to MongoDB');
+
     // Seed data
-    const product = [
+    const items = [
       {
-        title: 'Product 1',
-        description: 'Description of Product 1',
+        title: 'Item 1',
+        description: 'Description of Item 1',
         category: 'Category A',
         price: 19.99,
         date_added: new Date('2023-07-28')
       },
       {
-        title: 'Product 2',
-        description: 'Description of Product 2',
+        title: 'Item 2',
+        description: 'Description of Item 2',
         category: 'Category B',
         price: 24.99,
         date_added: new Date('2023-07-28')
       },
       {
-        title: 'Product 3',
-        description: 'Description of Product 3',
+        title: 'Item 3',
+        description: 'Description of Item 3',
         category: 'Category A',
         price: 14.99,
         date_added: new Date('2023-07-28')
       },
       {
-        title: 'Product 4',
-        description: 'Description of Product 4',
+        title: 'Item 4',
+        description: 'Description of Item 4',
         category: 'Category C',
         price: 34.99,
         date_added: new Date('2023-07-28')
       }
     ];
 
-
-
-
-
-  db.once('open', async () => {
-    await Product.deleteMany();
-    await Product.create(product);
-
-    console.log('all done!');
-    process.exit(0);
+    // Insert seed data into the database
+    Item.insertMany(items)
+      .then(() => {
+        console.log('Seed data inserted successfully');
+        // Close the connection to the database after seeding
+        mongoose.connection.close();
+      })
+      .catch((err) => {
+        console.error('Error seeding data:', err);
+        // Close the connection to the database if an error occurs during seeding
+        mongoose.connection.close();
+      });
+  })
+  .catch((err) => {
+    console.error('Error connecting to MongoDB:', err);
   });
+
