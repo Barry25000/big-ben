@@ -1,3 +1,8 @@
 TODO: Login feature with JWT
 - tests
 - packages
+
+
+- [ ] Login feature with
+- [ ] tests (Bearer token)
+- use node.js.crpyto to hash password
