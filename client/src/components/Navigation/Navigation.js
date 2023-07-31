@@ -35,11 +35,11 @@ function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="#Page_1"
-          onClick={() => setCurrentPage("Page_1")}
-          className={currentPage === "Page_1" ? "nav-link active" : "nav-link"}
+          href="#LogIn"
+          onClick={() => setCurrentPage("LogIn")}
+          className={currentPage === "LogIn" ? "nav-link active" : "nav-link"}
         >
-          Page_1
+          LogIn
         </a>
       </li>
       <li className="nav-item">
