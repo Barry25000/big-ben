@@ -8,7 +8,8 @@ const CategorySchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    trim: true
   },
   description: {
     type: String,
@@ -21,6 +22,6 @@ const CategorySchema = new Schema({
 });
 
 // Create and export the Category model based on the CategorySchema
-const Category = mongoose.model('category', CategorySchema);
+const Category = mongoose.model('Category', CategorySchema);
 
 module.exports = Category;

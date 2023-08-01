@@ -1,14 +1,14 @@
-// create a web token
 const jwt = require('jsonwebtoken');
-//set secret key to 2h
+
 const secret = 'mysecretssshhhhhhh';
 const expiration = '2h';
 
-
-// function to auth user
 module.exports = {
   authMiddleware: function ({ req }) {
     let token = req.body.token || req.query.token || req.headers.authorization;
+    // allow token to be sent via req.body, req.query, or headers
+
+    // [Bearer, <tokenvalue>]
 
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
@@ -27,8 +27,10 @@ module.exports = {
 
     return req;
   },
+
   signToken: function ({ email, username, _id }) {
     const payload = { email, username, _id };
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };
+

@@ -5,6 +5,7 @@ const User = require('./User');
 const Product = require('./Product');
 const Cart = require('./Cart');
 const Order = require('./Order');
+const Category = require('./Category');
 
 // Export all the models as an object
 module.exports = {
@@ -12,6 +13,7 @@ module.exports = {
   Product,
   Cart,
   Order,
+  Category
 };
 
 

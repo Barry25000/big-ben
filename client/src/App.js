@@ -1,21 +1,16 @@
-
-import React from 'react';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
+import React from "react";
+import SiteContainer from "./components/SiteContainer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import { useState } from "react";
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 
-import Home from './pages/Home';
-import Signup from './pages/Signup';
-import Login from './pages/Login';
-import SingleThought from './pages/SingleThought';
-import Profile from './pages/Profile';
-import Header from './components/Header';
-import Footer from './components/Footer';
+// pages 
+import Home from './components/Pages/Home';
+import Hello from './Hello';
+import LogIn from "./components/Pages/LogIn/LogIn";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -41,49 +36,79 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+import Page2 from './components/Pages/Page_2/Page_2'; 
+import Search from './components/Pages/Search/Search';
+// 
 
-const App = () => {
-  const [currentPage, setCurrentPage] = useState("Home");
+
+// //  ORIGINAL APP.JS (DON'T DELETE)
+
+
+// -- this is the stuff we tried and gave us errors
+// const App = () => {
+//   const [currentPage, setCurrentPage] = useState("Home");
+//   return (
+//     <div>
+//     <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+//      <SiteContainer
+//          currentPage={currentPage}
+//        setCurrentPage={setCurrentPage}
+//       />
+//      <Footer />
+//    </div>
+//   );
+// };
+
+
+
+// Construct our main GraphQL API endpoint
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+// Construct request middleware that will attach the JWT token to every request as an `authorization` header
+var authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem('id_token');
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+var authLink = setContext((_, { headers }) => { });
+// get the authentication token from local storage if it exists
+const client = new ApolloClient({
+  // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
+
+function App() {
   return (
 
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div>
           <Header />
-          <div className="container">
-            <Routes>
-              <Route 
-                path="/"
-                element={<Home />}
-              />
-              <Route 
-                path="/login"
-                element={<Login />}
-              />
-              <Route 
-                path="/signup"
-                element={<Signup />}
-              />
-              <Route 
-                path="/me"
-                element={<Profile />}
-              />
-              <Route 
-                path="/profiles/:username"
-                element={<Profile />}
-              />
-              <Route 
-                path="/thoughts/:thoughtId"
-                element={<SingleThought />}
-              />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/hello" element={<Hello />} />
+            <Route path="/login" element={<LogIn />} />
+            {/* <Route path="/page2" element={<Page2 />} /> */}
+            <Route path="/search" element={<Search />} />
+            
+          </Routes>
+
           <Footer />
         </div>
       </Router>
     </ApolloProvider>
 
   );
-};
+}
 
 export default App;
