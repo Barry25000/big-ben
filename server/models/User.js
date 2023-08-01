@@ -17,8 +17,12 @@ const UserSchema = new Schema({
     type: String,
     required: [true, 'Please enter an email'],
     unique: true,
-    lowercase: true,
+
+
+    lowercase: true, // convert email to lowercase
     validate: [isEmail, 'Please enter a valid email']
+
+
   },
   password: {
     type: String,

@@ -9,6 +9,7 @@ module.exports = {
     // allow token to be sent via req.body, req.query, or headers
 
     // [Bearer, <tokenvalue>]
+
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }
@@ -26,8 +27,9 @@ module.exports = {
 
     return req;
   },
-  signToken: function ({ email, name, _id }) {
-    const payload = { email, name , _id };
+
+  signToken: function ({ email, username, _id }) {
+    const payload = { email, username, _id };
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };

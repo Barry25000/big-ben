@@ -1,11 +1,4 @@
 TODO: Login feature with JWT
 - tests
 - packages
-- React in bootstrap
-- GraphQL
-- Stripe
-- Data model/ schema
-- Components
-- State management
-- seeders
-- watch data / coupon code
+
