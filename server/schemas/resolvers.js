@@ -1,6 +1,8 @@
 const { AuthenticationError } = require('apollo-server-express');
+// TODO:  add Product and Category 
 const { User, Order } = require('../models');
 const { signToken } = require('../utils/auth');
+//TODO: Insert stipe here 
 
 // const resolvers = {
 const resolvers = {
@@ -20,6 +22,8 @@ const resolvers = {
                 throw new AuthenticationError('You need to be logged in!');
             },
             },
+
+            // TODO: Insert checkout here
 
         // Mutations
 

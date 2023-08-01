@@ -3,4 +3,6 @@ TODO: Login feature with JWT
 - packages
 
 
-git branch -D login2
+2023-07-31 19:00:41
+- [ ] Login
+- [ ] Convert REST to GraphQL

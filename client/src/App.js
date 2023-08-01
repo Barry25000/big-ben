@@ -3,13 +3,14 @@ import SiteContainer from "./components/SiteContainer";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { useState } from "react";
-
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 // pages 
 import Home from './components/Pages/Home';
 import Hello from './Hello';
+
+// 
 //import Login from './components/Pages/LogIn';
 // import Page2 from './pages/Page2'; //TODO: change this later once we decide what we call Page2
 // import Search from './pages/Search';
@@ -66,17 +67,28 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          
-            <Routes>
-              <Route
-                path="/"
-                element={<Home />}
-              />
-            </Routes>
-        
+
+          <Routes>
+            <Route
+              path="/"
+              element={<Home />}
+            />
+          </Routes>
+
 
           <Routes>
             <Route path="/" element={<Hello />} />
+
+          </Routes>
+          <Routes>
+            <Route path="/" element={<Hello />} />
+          </Routes>
+          <Routes>
+            <Route path="/" element={<Hello />} />
+          </Routes>
+          <Routes>
+            <Route path="/" element={<Hello />} />
+
           </Routes>
           <Footer />
         </div>
