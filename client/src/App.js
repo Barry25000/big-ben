@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   ApolloClient,
@@ -40,8 +41,11 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
+
+const App = () => {
+  const [currentPage, setCurrentPage] = useState("Home");
   return (
+
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
@@ -78,7 +82,8 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
+
   );
-}
+};
 
 export default App;

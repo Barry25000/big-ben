@@ -1,6 +1,8 @@
 node_modules
 DS_Store
 package-lock.json
+
 package.json
 .vscode/tasks-context.json
 .vscode/settings.json
+
