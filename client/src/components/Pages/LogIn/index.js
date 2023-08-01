@@ -4,7 +4,7 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2023-07-31 20:32:34 
  * @Last Modified by: Someone
- * @Last Modified time: 2023-07-31 21:23:15
+ * @Last Modified time: 2023-08-01 02:10:18
  * @Description: Login functionality
  * I got this from  Unit26  
  */
@@ -13,8 +13,14 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
-import { LOGIN_USER } from "../../utils/mutations";
+import { LOGIN_USER , ADD_USER } from "../../utils/mutations";
+// import auth from "../../utils/auth";
 import Auth from "../../utils/auth";
+// import auth
+// import "./style.css";
+
+// import { ADD_USER } from "../../utils/mutations";
+// import { LOGIN_USER } from "../../utils/mutations";
 
 
 // Login component
@@ -62,6 +68,7 @@ function LogIn(props) {
                         id="email"
                         onChange={handleChange}
                     />
+                
 
 
                 </div>
@@ -93,3 +100,4 @@ function LogIn(props) {
 
 
 export default LogIn;
+// export

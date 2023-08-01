@@ -1,0 +1,70 @@
+/*  */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.my1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.my-2 {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+}
+
+
+#login {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#pwd {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.error-text {
+  color: red;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  */
+#email {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#pwd {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}

@@ -10,7 +10,7 @@ const productSeeds = require('./productSeeds.json');
 db.once('open', async () => {
   try {
     // first delete the data already in there 
-    // await User.deleteMany({});
+    await User.deleteMany({});
     // await Item.deleteMany({});
     // await Cart.deleteMany({});
     // await Order.deleteMany({});
@@ -29,7 +29,7 @@ db.once('open', async () => {
 
     // log the results
     console.table('users seeded');
-    console.table('items seeded');
+    // console.table('items seeded');
     console.log('all done!');
   } catch (err) {
     console.error(err);
