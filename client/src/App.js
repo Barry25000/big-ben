@@ -11,8 +11,8 @@ import Home from './components/Pages/Home';
 import Hello from './Hello';
 import LogIn from "./components/Pages/LogIn/LogIn";
 
-import Page2 from './pages/Page2'; 
-import Search from './pages/Search';
+import Page2 from './components/Pages/Page_2/Page_2'; 
+import Search from './components/Pages/Search/Search';
 // 
 
 
@@ -72,7 +72,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/hello" element={<Hello />} />
             <Route path="/login" element={<LogIn />} />
-            <Route path="/page2" element={<Page2 />} />
+            {/* <Route path="/page2" element={<Page2 />} /> */}
             <Route path="/search" element={<Search />} />
             
           </Routes>

@@ -8,15 +8,16 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
         
-            // TODO: Insert checkout here
+    //         // TODO: Insert checkout here
 
 
 
   
+    //     },
+    //     // get a user by username
+        user: async () => {
+        return await User.find();
         },
-        // get a user by username
-        user: async (parent, { username}) => {
-
 
         },
         // get a user by _id
@@ -49,7 +50,7 @@ const resolvers = {
                 if (!correctPw) {
                     throw new AuthenticationError('Incorrect credentials');
                 }
-
+                console.log(user);
                 const token = signToken(user);
 
                 return { token, user }

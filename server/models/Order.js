@@ -6,11 +6,11 @@ const Schema = mongoose.Schema;
 // Define the OrderSchema
 const OrderSchema = new Schema({
   userId: {
-    type: String,
+    type: Schema.Types.ObjectId
   },
   items: [{
     productId: {
-      type: String,
+      type: Schema.Types.ObjectId,
     },
     name: String,
     quantity: {
@@ -31,6 +31,6 @@ const OrderSchema = new Schema({
 });
 
 // Create and export the Order model based on the OrderSchema
-const Order = mongoose.model('order', OrderSchema);
+const Order = mongoose.model('Order', OrderSchema);
 
 module.exports = Order;

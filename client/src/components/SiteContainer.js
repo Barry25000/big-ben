@@ -1,6 +1,6 @@
 import React from "react";
-import Home from "./Pages/Home";
-import Search from "./Pages/Search";
+import Home from "./Pages/Home/index";
+import Search from "./Pages/Search/Search";
 import LogIn from "./Pages/LogIn/LogIn";
 import Page_2 from "./Pages/Page_2/Page_2";
 
@@ -18,5 +18,3 @@ export default function SiteContainer({ currentPage, setCurrentPage }) {
     return <Page_2 />;
   }
 }
-
-module.exports = SiteContainer;

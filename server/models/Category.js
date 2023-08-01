@@ -22,6 +22,6 @@ const CategorySchema = new Schema({
 });
 
 // Create and export the Category model based on the CategorySchema
-const Category = mongoose.model('category', CategorySchema);
+const Category = mongoose.model('Category', CategorySchema);
 
 module.exports = Category;

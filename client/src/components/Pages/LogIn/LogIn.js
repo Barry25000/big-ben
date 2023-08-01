@@ -16,21 +16,24 @@ function LogIn(props) {
     // set initial form state
     const [formState, setFormState] = useState({ email: "", password: "" });
     // error state
-    const [login, { error }] = useMutation(LOGIN_USER);
+    const [LogIn, { error }] = useMutation(LOGIN_USER);
 
     // update state based on form input changes
     const handleFormSubmit = async (event) => {
         event.preventDefault();
 
         try {
-            const mutationResponse = await login({
+            const mutationResponse = await LogIn({
                 variables: { email: formState.email, password: formState.password },
             });
-            const token = mutationResponse.data.login.token;
+            console.log(mutationResponse);
+            const token = mutationResponse.data.LogIn.token;
             Auth.login(token);
         } catch (e) {
-            console.log(e);
+            console.log('login failed')
+            console.log(JSON.stringify(e));
         }
+        setFormState({ email: "", password: "" });
     };
 
     // update state based on form input changes
@@ -53,6 +56,7 @@ function LogIn(props) {
                     <input
                         placeholder="youremail@test.com"
                         name="email"
+                        value={formState.email}
                         type="email"
                         id="email"
                         onChange={handleChange}
@@ -66,6 +70,7 @@ function LogIn(props) {
                     <input
                         placeholder="******"
                         name="password"
+                        value={formState.password}
                         type="password"
                         id="pwd"
                         onChange={handleChange}
