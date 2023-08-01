@@ -1,3 +1,9 @@
 TODO: Login feature with JWT
 - tests
 - packages
+
+
+- [ ] Login feature (local)
+- [ ] Login feature (heroku)
+- [ ] tests (Bearer token)
+
