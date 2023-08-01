@@ -1,32 +1,36 @@
 import React from "react";
-import SiteContainer from "./components/SiteContainer";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { useState } from "react";
-import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { setContext } from "@apollo/client/link/context";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
 
-// pages 
-import Home from './components/Pages/Home';
-import Hello from './Hello';
+// pages
+import Home from "./components/Pages/Home";
+import Hello from "./Hello";
 import LogIn from "./components/Pages/LogIn/LogIn";
 
-import Page2 from './components/Pages/Page_2/Page_2'; 
-import Search from './components/Pages/Search/Search';
+import Page2 from "./components/Pages/Page_2/Page_2";
+import Search from "./components/Pages/Search/Search";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -36,7 +40,6 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-
 
 function App() {
   return (

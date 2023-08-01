@@ -6,7 +6,7 @@ import "./Navigation.css";
 
 const pages = ["Home", "Search", "Page_1", "Page_2"];
 
-function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
+function Navigation() {
   return (
     <ul
       className="nav nav-tabs"
@@ -16,8 +16,7 @@ function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
         <a
           id="nav-link"
           href="/"
-          onClick={() => setCurrentPage("Home")}
-          className={currentPage === "Home" ? "nav-link active" : "nav-link"}
+          className={true ? "nav-link active" : "nav-link"}
         >
           Home
         </a>
@@ -26,8 +25,7 @@ function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
         <a
           id="nav-link"
           href="/search"
-          onClick={() => setCurrentPage("Search")}
-          className={currentPage === "Search" ? "nav-link active" : "nav-link"}
+          className={true ? "nav-link active" : "nav-link"}
         >
           Search
         </a>
@@ -35,9 +33,8 @@ function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="/LogIn"
-          onClick={() => setCurrentPage("LogIn")}
-          className={currentPage === "LogIn" ? "nav-link active" : "nav-link"}
+          href="/Login"
+          className={true ? "nav-link active" : "nav-link"}
         >
           LogIn
         </a>
@@ -46,8 +43,7 @@ function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
         <a
           id="nav-link"
           href="/Page_2"
-          onClick={() => setCurrentPage("Page_2")}
-          className={currentPage === "Page_2" ? "nav-link active" : "nav-link"}
+          className={true ? "nav-link active" : "nav-link"}
         >
           Page_2
         </a>
