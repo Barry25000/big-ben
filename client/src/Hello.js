@@ -1,6 +1,9 @@
+
  const Hello = () => {
     return (
-        <h1>Test</h1>
+        <h1>Hello </h1>
+
+        
     )
 }
 export default Hello;

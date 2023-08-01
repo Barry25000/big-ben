@@ -4,7 +4,7 @@
  * @Email: amirjavadi25@gmail.com
  * @Date: 2023-07-31 20:32:34 
  * @Last Modified by: Someone
- * @Last Modified time: 2023-07-31 20:33:04
+ * @Last Modified time: 2023-07-31 21:23:15
  * @Description: Login functionality
  * I got this from  Unit26  
  */
@@ -50,7 +50,7 @@ function LogIn(props) {
 
     return (
         <div className="container my1">
-            <Link to="/signup">← Go to Signup</Link>
+            <Link to="/login">← Go to Signup</Link>
             <h2>Login</h2>
             <form onSubmit={handleFormSubmit}>
                 <div className="flex-row space-between my-2">

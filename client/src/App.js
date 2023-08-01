@@ -9,6 +9,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 // pages 
 import Home from './components/Pages/Home';
 import Hello from './Hello';
+import LogIn from "./components/Pages/LogIn";
 
 // 
 //import Login from './components/Pages/LogIn';
@@ -65,37 +66,18 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-
-          <Routes>
-            <Route
-              path="/"
-              element={<Home />}
-            />
-          </Routes>
-
-
-          <Routes>
-            <Route path="/" element={<Hello />} />
-
-          </Routes>
-          <Routes>
-            <Route path="/" element={<Hello />} />
-          </Routes>
-          <Routes>
-            <Route path="/" element={<Hello />} />
-          </Routes>
-          <Routes>
-            <Route path="/" element={<Hello />} />
-
-          </Routes>
-          <Footer />
-        </div>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/hello" element={<Hello />} />
+          <Route path="/login" element={<LogIn />} />
+        </Routes>
+        <Footer />
       </Router>
     </ApolloProvider>
   );
 }
+
 
 
 
