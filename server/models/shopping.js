@@ -1,5 +1,5 @@
 // models/Cart.js
-// Added cap C to name of file.
+
 
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
