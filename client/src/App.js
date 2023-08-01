@@ -9,32 +9,30 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 // pages 
 import Home from './components/Pages/Home';
 import Hello from './Hello';
-import LogIn from "./components/Pages/LogIn";
+import LogIn from "./components/Pages/LogIn/LogIn";
 
+import Page2 from './pages/Page2'; 
+import Search from './pages/Search';
 // 
-//import Login from './components/Pages/LogIn';
-// import Page2 from './pages/Page2'; //TODO: change this later once we decide what we call Page2
-// import Search from './pages/Search';
-
 
 
 // //  ORIGINAL APP.JS (DON'T DELETE)
 
 
 // -- this is the stuff we tried and gave us errors
-// // const App = () => {
-// //   const [currentPage, setCurrentPage] = useState("Home");
-// //   return (
-// //     <div>
-// //       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-// //       <SiteContainer
-// //         currentPage={currentPage}
-// //         setCurrentPage={setCurrentPage}
-// //       />
-// //       <Footer />
-// //     </div>
-// //   );
-// // }
+// const App = () => {
+//   const [currentPage, setCurrentPage] = useState("Home");
+//   return (
+//     <div>
+//     <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+//      <SiteContainer
+//          currentPage={currentPage}
+//        setCurrentPage={setCurrentPage}
+//       />
+//      <Footer />
+//    </div>
+//   );
+// };
 
 
 
@@ -44,7 +42,7 @@ const httpLink = createHttpLink({
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
-const authLink = setContext((_, { headers }) => {
+var authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
   const token = localStorage.getItem('id_token');
   // return the headers to the context so httpLink can read them
@@ -56,6 +54,8 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
+var authLink = setContext((_, { headers }) => { });
+// get the authentication token from local storage if it exists
 const client = new ApolloClient({
   // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
   link: authLink.concat(httpLink),
@@ -66,13 +66,18 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/hello" element={<Hello />} />
-          <Route path="/login" element={<LogIn />} />
-        </Routes>
-        <Footer />
+        <div>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/hello" element={<Hello />} />
+            <Route path="/login" element={<LogIn />} />
+            <Route path="/page2" element={<Page2 />} />
+            <Route path="/search" element={<Search />} />
+            
+          </Routes>
+          <Footer />
+        </div>
       </Router>
     </ApolloProvider>
   );

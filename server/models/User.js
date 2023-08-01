@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose
 const bcrypt = require('bcrypt');
 const { isEmail } = require('validator');
+const Order = require('./Order');
 
 // Define the UserSchema
 const UserSchema = new Schema({
@@ -27,7 +28,8 @@ const UserSchema = new Schema({
   register_date: {
     type: Date,
     default: Date.now
-  }
+  },
+  orders: [Order.schema]
 });
 
 // set up a pre-save middleware to create the password

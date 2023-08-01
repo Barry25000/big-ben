@@ -1,8 +1,8 @@
 import React from "react";
 import Home from "./Pages/Home";
-// import Search from "./Pages/Search";
-import LogIn from "./Pages/LogIn";
-// import Page_2 from "./Pages/Page_2/Page_2";
+import Search from "./Pages/Search";
+import LogIn from "./Pages/LogIn/LogIn";
+import Page_2 from "./Pages/Page_2/Page_2";
 
 export default function SiteContainer({ currentPage, setCurrentPage }) {
   if (currentPage === "Home") {

@@ -1,23 +1,11 @@
 
-/*
- * @Author: AJ Javadi 
- * @Email: amirjavadi25@gmail.com
- * @Date: 2023-07-31 20:32:34 
- * @Last Modified by: Someone
- * @Last Modified time: 2023-08-01 02:10:18
- * @Description: Login functionality
- * I got this from  Unit26  
- */
-
-
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
-import { LOGIN_USER , ADD_USER } from "../../utils/mutations";
-// import auth from "../../utils/auth";
-import Auth from "../../utils/auth";
-// import auth
-// import "./style.css";
+import { LOGIN_USER , ADD_USER } from "../../../utils/mutations";
+import Auth from "../../../utils/auth";
+import "./style.css";
+
 
 // import { ADD_USER } from "../../utils/mutations";
 // import { LOGIN_USER } from "../../utils/mutations";
@@ -55,6 +43,7 @@ function LogIn(props) {
     };
 
     return (
+     
         <div className="container my1">
             <Link to="/login">← Go to Signup</Link>
             <h2>Login</h2>

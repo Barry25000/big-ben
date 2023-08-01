@@ -1,8 +1,11 @@
 TODO: Login feature with JWT
 - tests
 - packages
-
-
-2023-07-31 19:00:41
-- [ ] Login
-- [ ] Convert REST to GraphQL
+- React in bootstrap
+- GraphQL
+- Stripe
+- Data model/ schema
+- Components
+- State management
+- seeders
+- watch data / coupon code
