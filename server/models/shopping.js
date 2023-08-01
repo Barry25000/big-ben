@@ -1,4 +1,5 @@
 // models/Cart.js
+// fixing capitilization
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
