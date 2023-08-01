@@ -15,7 +15,7 @@ function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="#Home"
+          href="/"
           onClick={() => setCurrentPage("Home")}
           className={currentPage === "Home" ? "nav-link active" : "nav-link"}
         >
@@ -25,7 +25,7 @@ function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="#Search"
+          href="/search"
           onClick={() => setCurrentPage("Search")}
           className={currentPage === "Search" ? "nav-link active" : "nav-link"}
         >
@@ -35,7 +35,7 @@ function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="#LogIn"
+          href="/LogIn"
           onClick={() => setCurrentPage("LogIn")}
           className={currentPage === "LogIn" ? "nav-link active" : "nav-link"}
         >
@@ -45,7 +45,7 @@ function Navigation({ currentPage, setCurrentPage, handleCloseNavMenu }) {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="#Page_2"
+          href="/Page_2"
           onClick={() => setCurrentPage("Page_2")}
           className={currentPage === "Page_2" ? "nav-link active" : "nav-link"}
         >
