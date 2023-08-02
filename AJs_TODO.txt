@@ -1,0 +1,11 @@
+TODO: 
+Login feature with JWT
+- tests with JEST 
+- packages
+- graphql Mutation
+- graphql Query
+- CouponJS
+- Pixalbay API
+- dotENV
+
+

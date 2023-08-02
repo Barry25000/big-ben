@@ -16,6 +16,18 @@
         "username": "aspencer2",
         "email": "aspencer2@gmail.com",
         "password": "angel123"
+    },
+    {
+        "name": "AJ Javadi",
+        "username": "ajavadi2",
+        "email": "aj2@gmail.com",
+        "password": "aj123"
+    },
+    {
+        "name": "Max Tate",
+        "username": "matate2",
+        "email": "mtate@gmail.com",
+        "password": "mt123"
     }
 
 ]
