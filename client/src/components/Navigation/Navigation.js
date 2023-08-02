@@ -4,30 +4,30 @@ import "./Navigation.css";
 // import { Button } from "@mui/material";
 // import useTab from "@mui/base/useTab";
 
-const pages = ["Home", "Search", "Page_1", "Page_2"];
+// const pages = ["Home", "Search", "Page_1", "Page_2"];
 
 function Navigation() {
   return (
     <ul
       className="nav nav-tabs"
-      style={{ paddingRight: "55px", paddingTop: "30px" }}
+      style={{ paddingRight: "45px", paddingTop: "30px" }}
     >
       <li className="nav-item">
         <a
           id="nav-link"
-          href="/"
+          href="/Home"
           className={true ? "nav-link active" : "nav-link"}
         >
-          Home
+          HOME
         </a>
       </li>
       <li className="nav-item">
         <a
           id="nav-link"
-          href="/search"
+          href="/Search"
           className={true ? "nav-link active" : "nav-link"}
         >
-          Search
+          SHOP
         </a>
       </li>
       <li className="nav-item">
@@ -36,10 +36,10 @@ function Navigation() {
           href="/Login"
           className={true ? "nav-link active" : "nav-link"}
         >
-          LogIn
+          LOGIN
         </a>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <a
           id="nav-link"
           href="/Page_2"
@@ -47,7 +47,7 @@ function Navigation() {
         >
           Page_2
         </a>
-      </li>
+      </li> */}
     </ul>
   );
 }
