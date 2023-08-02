@@ -3,6 +3,7 @@ import "./Navigation.css";
 // import Box from "@mui/material/Box";
 // import { Button } from "@mui/material";
 // import useTab from "@mui/base/useTab";
+//hello please delete me
 
 // const pages = ["Home", "Search", "Page_1", "Page_2"];
 
@@ -15,7 +16,7 @@ function Navigation() {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="/Home"
+          href="/"
           className={true ? "nav-link active" : "nav-link"}
         >
           HOME
@@ -24,7 +25,7 @@ function Navigation() {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="/Search"
+          href="/search"
           className={true ? "nav-link active" : "nav-link"}
         >
           SHOP
@@ -33,7 +34,7 @@ function Navigation() {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="/Login"
+          href="/login"
           className={true ? "nav-link active" : "nav-link"}
         >
           LOGIN
