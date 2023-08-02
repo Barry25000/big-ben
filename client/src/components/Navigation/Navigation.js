@@ -15,7 +15,7 @@ function Navigation() {
       <li className="nav-item">
         <a
           id="nav-link"
-          href="/Home"
+          href="/"
           className={true ? "nav-link active" : "nav-link"}
         >
           HOME
