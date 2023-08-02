@@ -10,15 +10,8 @@ const CategorySchema = new Schema({
     required: true,
     unique: true,
     trim: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  date_added: {
-    type: Date,
-    default: Date.now
   }
+ 
 });
 
 // Create and export the Category model based on the CategorySchema

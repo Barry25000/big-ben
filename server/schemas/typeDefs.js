@@ -1,71 +1,57 @@
 // type Defs 
 const { gql } = require('apollo-server-express');
 
-
-
 const typeDefs = gql`
+    # type: Checkout {
+    #   session: ID
+    # }
+    type Product {
+      _id: ID
+      name: String
+      description: String
+      image: String
+      quantity: Int
+      price: Float
+    }
+
+    type Category {
+      _id: ID
+      name: String
+    }
+
     type User {
         _id: ID
         username: String
         email: String
         password: String
-        orders: [Order]
+        order: [Order]
     }
     type Auth {
         token: ID!
         user: User
-      }
-      type Query {
-        user: [User]
-        user(username: String!): User
-        orders(username: String): [Order]
-        order(orderId: ID!): Order
-        me: User
-      }
+    }
       type Order {
         _id: ID!
         purchaseDate: String
         products: [Product]
       }
-      type User {
-        _id: ID!
-        name: String
-        email: String
-        orders:[Order]
 
-        type: Checkout {
-          session: ID
-        }
-        type: Auth {
-          token: ID
-          user: User
+    type Query {
+      user: [User]
+      categories: [Category]
+      products(name: String): [Product]
+      product(_id: ID!): Product
+      order(orderId: ID!): Order
+      #checkout(products: [ID]!): Checkout
+    }
 
 
-        }
-        type: Query {
-          caterories:[Category]
-          products(category: ID, name:String):[Product]
-          product(_id: ID!):Product 
-          user: User
-          order(_id:ID!): Order
-          checkout(products: [ID!]:Checkout)
-        }
-
-        type: Mutation {
-            addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-            addOrder(products: [ID]!): Order
-            updateUser(firstName: String, lastName: String, email: String, password: String): User
-            updateProduct(_id: ID!, quantity: Int!): Product
-            LogIn(email: String!, password: String!): Auth
-            removeOrder(orderID: ID!): Order
-
-
+    type Mutation {
+      addUser(name: String! email: String!, password: String!): Auth
+      addOrder(products: [ID]!): Order
+      LogIn(email: String!, password: String!): Auth
   }
 
-
-              
-
-            
-            `;
+`;
 module.exports = typeDefs;
 
