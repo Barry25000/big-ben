@@ -23,8 +23,15 @@ const ProductSchema = new Schema({
   },
   date_added: {
     type: Date,
-    default: Date.now
+    default: Date.now// current timestamp
+  },
+  image: {
+    type: String,
+    description: String
+  
+
   }
+
 });
 
 // Create and export the Item model based on the ItemSchema
