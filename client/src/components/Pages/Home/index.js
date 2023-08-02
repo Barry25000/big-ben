@@ -1,31 +1,9 @@
 // import React from "react";
 import "./Home.css";
-import Banner from "../../../images/Banner.png";
-// we had to comment this part out because we kept getting issues with muiicons giving us a use context hook error 
-// import CardMedia from "@mui/material/CardMedia";
 
 export default function Home() {
   return (
     <>
-
-
-    {/* INSERT WATCH IMAGE HERE:  */}
-    
-      {/* <div className="image-container">
-        <CardMedia
-          component="img"
-          className="color-img"
-          style={{
-            height: "auto",
-            width: "100%",
-            margin: "0 auto",
-            // paddingTop: "20px",
-          }}
-          image={Banner}
-          alt="Home Page"
-        />
-      </div> */}
-
       <div style={{ width: "70%", margin: "0 auto" }}>
         <h1 id="about-me-title">Big Ben Watch Emporium</h1>
         <p id="p-about">

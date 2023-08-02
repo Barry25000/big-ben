@@ -1,16 +1,18 @@
 import React from "react";
 import "./Navigation.css";
+import { Link } from "react-router-dom";
 // import Box from "@mui/material/Box";
 // import { Button } from "@mui/material";
 // import useTab from "@mui/base/useTab";
+//hello please delete me
 
-const pages = ["Home", "Search", "Page_1", "Page_2"];
+// const pages = ["Home", "Search", "Page_1", "Page_2"];
 
 function Navigation() {
   return (
     <ul
       className="nav nav-tabs"
-      style={{ paddingRight: "55px", paddingTop: "30px" }}
+      style={{ paddingRight: "45px", paddingTop: "30px" }}
     >
       <li className="nav-item">
         <a
@@ -18,28 +20,24 @@ function Navigation() {
           href="/"
           className={true ? "nav-link active" : "nav-link"}
         >
-          Home
+          HOME
         </a>
       </li>
       <li className="nav-item">
-        <a
-          id="nav-link"
-          href="/search"
-          className={true ? "nav-link active" : "nav-link"}
-        >
-          Search
-        </a>
+        <Link to="/search">
+          <a id="nav-link" className={true ? "nav-link active" : "nav-link"}>
+            SHOP
+          </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
-          id="nav-link"
-          href="/Login"
-          className={true ? "nav-link active" : "nav-link"}
-        >
-          LogIn
-        </a>
+        <Link to="/login">
+          <a id="nav-link" className={true ? "nav-link active" : "nav-link"}>
+            LOGIN
+          </a>
+        </Link>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <a
           id="nav-link"
           href="/Page_2"
@@ -47,7 +45,7 @@ function Navigation() {
         >
           Page_2
         </a>
-      </li>
+      </li> */}
     </ul>
   );
 }
