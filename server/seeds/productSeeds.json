@@ -1,3 +1,9 @@
-[
-    
-]
+[{
+    "title": "Item 1',
+    description: 'Description of Item 1',
+    category: 'Category A',
+    price: 19.99,
+    date_added: new Date('2023-07-28'),
+    image: "./server/assets/Rolex/001_198f48ca.jpg",
+  }
+];
