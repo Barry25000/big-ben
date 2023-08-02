@@ -4,13 +4,14 @@
     "description": "Description of Item 1",
     "category": "Category A",
     "price": "19.99",
-    "date_added": "new Date('2023-07-28')",
+    "date_added": "2023-07-28",
     "image": "./server/assets/Rolex/001_198f48ca.jpg"
   },
   {
     "title": "Classic Leather Watch",
     "description": "A timeless and elegant leather strap watch for any occasion.",
     "category": "Analog",
+    "date_added": "2023-08-02",
     "price": "99.99",
     "image": "./server/assets/Rolex/002_1a9c8f6a.jpg"
   },
