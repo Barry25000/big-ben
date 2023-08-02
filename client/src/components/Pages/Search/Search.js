@@ -1,18 +1,21 @@
-// search function here 
+// TODO: create shopping
 
-// const Search = () => {
-//     return (
-//         <div>
-//             <label for="search">: Search  </label>
+const Search = () => {
+  return (
+    <div>
+      <label for="search">: Search </label>
 
-//             <input type="text" id="search" name="search" required
-//                 minlength="1" maxlength="30" size="10">
-//             </input>
+      <input
+        type="text"
+        id="search"
+        name="search"
+        required
+        minlength="1"
+        maxlength="30"
+        size="10"
+      ></input>
+    </div>
+  );
+};
 
-//         </div>
-
-//     )
-
-//     };
-
-// export default Search;
+export default Search;
