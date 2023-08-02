@@ -17,5 +17,6 @@
     "@emotion/styled": "^11.11.0",
     "concurrently": "^8.2.0",
     "jsonwebtoken": "^9.0.1"
-  }
+  },
+  "devDependencies": {}
 }
