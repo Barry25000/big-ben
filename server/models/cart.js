@@ -24,7 +24,13 @@ const CartSchema = new Schema({
   bill: {
     type: Number,
     required: true,
-    default: 0
+    default: 0,
+    coupoun: {
+      type: String,
+      default: 'none'
+    },
+
+
   }
 });
 

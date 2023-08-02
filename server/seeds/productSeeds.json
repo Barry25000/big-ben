@@ -1,9 +1,31 @@
-[{
-    "title": "Item 1',
-    description: 'Description of Item 1',
-    category: 'Category A',
-    price: 19.99,
-    date_added: new Date('2023-07-28'),
-    image: "./server/assets/Rolex/001_198f48ca.jpg",
+[
+  {
+    "title": "Item 1",
+    "description": "Description of Item 1",
+    "category": "Category A",
+    "price": "19.99",
+    "date_added": "new Date('2023-07-28')",
+    "image": "./server/assets/Rolex/001_198f48ca.jpg"
+  },
+  {
+    "title": "Classic Leather Watch",
+    "description": "A timeless and elegant leather strap watch for any occasion.",
+    "category": "Analog",
+    "price": "99.99",
+    "image": "./server/assets/Rolex/002_1a9c8f6a.jpg"
+  },
+  {
+    "title": "Digital Sports Watch",
+    "description": "A high-performance digital sports watch with multiple functionalities.",
+    "category": "Digital",
+    "price": "129.99",
+    "image": "./server/assets/Rolex/003_2b8a0f21.jpg"
+  },
+  {
+    "title": "Luxury Chronograph Watch",
+    "description": "An exquisite chronograph watch with a sophisticated design.",
+    "category": "Chronograph",
+    "price": "349.99",
+    "date_added": "2023-05-06"
   }
-];
+]
