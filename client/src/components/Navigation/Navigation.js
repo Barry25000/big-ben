@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navigation.css";
+import { Link } from "react-router-dom";
 // import Box from "@mui/material/Box";
 // import { Button } from "@mui/material";
 // import useTab from "@mui/base/useTab";
@@ -23,22 +24,18 @@ function Navigation() {
         </a>
       </li>
       <li className="nav-item">
-        <a
-          id="nav-link"
-          href="/search"
-          className={true ? "nav-link active" : "nav-link"}
-        >
-          SHOP
-        </a>
+        <Link to="/search">
+          <a id="nav-link" className={true ? "nav-link active" : "nav-link"}>
+            SHOP
+          </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
-          id="nav-link"
-          href="/login"
-          className={true ? "nav-link active" : "nav-link"}
-        >
-          LOGIN
-        </a>
+        <Link to="/login">
+          <a id="nav-link" className={true ? "nav-link active" : "nav-link"}>
+            LOGIN
+          </a>
+        </Link>
       </li>
       {/* <li className="nav-item">
         <a
