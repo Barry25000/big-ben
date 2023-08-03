@@ -1,18 +1,36 @@
-# big-ben
+# Big Ben Watch Emporium, Project 3
+
+![MIT](https://img.shields.io/badge/license-MIT-green)
 
 ## Description
-A simple e-commerce website built using React, Redux, Node, Express and MongoDB.
 
-For the front end, we plan on using Semantic UI.
+A full Stack e-commerce website built using React, Redux, Node, Express and MongoDB, deployed on Heroku.
+This project was used to demenstrate our knowledge on full stack development in a group environment.
 
-For the back end, we plan on using Node, Express and MongoDB along with GraphQL.
+## Table of Contents
 
-We will also be creating test cases using Jest and Enzyme.
+- [Installation](#installation)
 
-The site will be deployed on Heroku.
+- [Usage](#usage)
 
----
-## Feature List
+- [License](#license)
+
+- [Contributing](#contributing)
+
+- [Tests](#tests)
+
+- [Questions](#questions)
+
+## Installation
+
+None <br>
+
+See our project on Heroku at https://rocky-retreat-21065-785cf39f6cd6.herokuapp.com/
+
+## Usage
+
+To demenstrate our knowledge of full stack design
+<br>
 
 - Authentication using JSON Web Tokens (JWT).
 - Option to add, edit, view and delete all the items in our store.
@@ -21,11 +39,28 @@ The site will be deployed on Heroku.
 - Using Local Storage to store the JWT so that we only allow logged-in users to buy items.
 - Option to pay and checkout, thus creating an order and emptying the cart.
 
+## License
 
----
-## Contributors
-- Barry Engler (Project Manager)
-- AJ Javadi 
-- Ilia 
+This project is licensed under. <br>
+MIT
+https://opensource.org/license/MIT/
 
+## Contributing
 
+AJ Javadi<br>
+Ilia Glazman<br>
+Barry Engler
+
+## Tests
+
+There are no tests at this time
+
+## Questions
+
+Please direct any questions to.<br>
+Barry at barryengler@gmail.com <br>
+[GitHub](https://github.com/Barry25000)<br>
+AJ at amirjavadi25@gmail.com<br>
+[GitHub](https://github.com/oshkoshbagoshh)<br>
+Ilia at<br>
+[GitHub](https://github.com/ilia-glazman690)<br>
