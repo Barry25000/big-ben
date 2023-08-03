@@ -13,11 +13,7 @@ export default function Home() {
           warranty so you can buy, as well as wear, your watch with zero
           worries.
         </p>
-        <p id="p-about">
-          Every previously owned watch undergoes a total disasembly, all rubber
-          gaskets are replaced as wwell as all springs are tested and replaced
-          if needed.
-        </p>
+        <p id="p-about"></p>
         <p id="p-about"></p>
         <p id="p-about"></p>
       </div>
