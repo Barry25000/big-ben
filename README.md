@@ -27,6 +27,9 @@ None <br>
 
 See our project on Heroku at https://rocky-retreat-21065-785cf39f6cd6.herokuapp.com/
 
+Test email: testuser1@gmail.com
+Test pass: 12345678
+
 ## Usage
 
 To demenstrate our knowledge of full stack design
